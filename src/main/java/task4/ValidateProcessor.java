@@ -20,11 +20,5 @@ public final class ValidateProcessor {
         }
         return validate.value();
     }
-
-    /**
-     * Закрытый конструктор, чтобы нельзя было создавать объекты этого класса.
-     * Класс используется только для вызова статического метода.
-     */
-    private ValidateProcessor() {
-    }
 }
+
