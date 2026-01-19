@@ -15,6 +15,7 @@ public class ToStringExample {
      * пометки NO.
      */
     private String name = "Алексей";
+    private String surname = "Иванов";
 
     /**
      * Поле age помечено как NO, поэтому при формировании строки оно не будет
@@ -25,11 +26,9 @@ public class ToStringExample {
 
     /**
      * Метод формирует строковое представление объекта.
-     *
      * Он перебирает все поля класса. Если поле помечено как YES или не имеет
      * аннотации @ToString, его имя и значение добавляются в строку.
      * Поля, помеченные как NO, игнорируются.
-     *
      * @return строка, содержащая только поля, которые нужно отображать
      */
     public String buildString() {
@@ -47,9 +46,8 @@ public class ToStringExample {
                     result.append(field.getName())
                             .append("=")
                             .append(field.get(this))
-                            .append(" ");
+                            .append("\n");
                 } catch (IllegalAccessException ignored) {
-                    // если поле нельзя прочитать, просто пропускаем
                 }
             }
         }
